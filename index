@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fbf7ef">
+<title>Korean Practice — November 24</title>
+<style>
+:root{--ink:#182538;--muted:#687386;--gold:#dc850b;--gold2:#fff2d9;--bg:#fbf7ef;--line:#e8dfcf;--green:#127b60;--blue:#2459a8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.65}
+button,input{font:inherit}button{cursor:pointer}header{background:#fff;border-bottom:1px solid var(--line)}.shell{max-width:960px;margin:auto;padding:0 20px}.top{padding:24px 0;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.eyebrow{color:#ad6305;font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}h1{font-size:clamp(24px,4.5vw,36px);line-height:1.2;letter-spacing:-.04em;margin:4px 0}.sub{color:var(--muted);margin:4px 0 0}.pill{background:var(--gold2);border:1px solid #f6d99e;color:#946004;border-radius:999px;padding:8px 14px;font-weight:800;font-size:13px}.main{padding-top:26px;padding-bottom:48px}.panel{background:#fff;border:1px solid var(--line);border-radius:19px;box-shadow:0 5px 24px rgba(74,51,17,.04);padding:24px;margin-bottom:19px}.intro{display:grid;grid-template-columns:1.4fr 1fr;gap:22px;align-items:start}.intro h2,.section-head h2{margin:0 0 10px;font-size:21px}.intro p{margin:0 0 8px}.rules{padding-left:22px;margin:10px 0 0;color:#48566a}.rules li{margin:5px 0}.student{background:#fffaf0;border:1px solid #f2dbb4;border-radius:14px;padding:20px}.student label{display:block;font-weight:800;margin-bottom:9px}.student input{width:100%;padding:13px;border:2px solid #d9c7ad;border-radius:11px;background:#fff;outline-offset:3px}.student input:focus{border-color:var(--gold)}.student .hint{color:var(--muted);font-size:12px;margin-top:9px}.progress-wrap{display:flex;align-items:center;gap:14px;margin:13px 0 0}.track{height:11px;border-radius:30px;background:#eee9e0;overflow:hidden;flex:1}.bar{height:100%;width:0;background:linear-gradient(90deg,#eab34b,#db8a12);transition:width .2s}.progress-text{font-size:13px;font-weight:800;white-space:nowrap}.section-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;margin-bottom:18px}.section-head h2{margin-bottom:3px}.section-head p{color:var(--muted);margin:0;font-size:14px}.section-count{font-size:12px;background:#f5f2eb;padding:6px 10px;border-radius:999px;white-space:nowrap;font-weight:700}.question{border:1px solid #e9e5dd;border-radius:14px;padding:18px;margin:12px 0;background:#fff}.question-title{font-weight:800;margin:0 0 12px;font-size:16px}.q-number{display:inline-block;color:var(--gold);font-weight:900;min-width:32px}.choices{display:grid;grid-template-columns:1fr 1fr;gap:9px}.choice{border:1.5px solid #d9dee3;border-radius:11px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start;cursor:pointer;min-width:0}.choice:hover{background:#fff9ec;border-color:#e5bb7e}.choice:has(input:checked){border-color:#d88d20;background:#fff7e8}.choice input{accent-color:#c17a13;margin-top:5px;flex-shrink:0}.choice span{word-break:keep-all;overflow-wrap:anywhere}.reading{white-space:pre-line;background:#f4f8f6;border-left:4px solid #71a79c;padding:19px 22px;margin:0 0 18px;border-radius:0 12px 12px 0;font-size:16px;line-height:1.95}.dialogue{white-space:pre-line;background:#f5f7fa;border-left:4px solid #7a94ba;padding:18px 20px;margin:0 0 18px;border-radius:0 12px 12px 0;line-height:1.95}.footerline{color:var(--muted);font-size:13px;text-align:center;padding:20px}.btn{border:0;border-radius:12px;padding:13px 21px;background:#dc8208;color:#fff;font-weight:850;box-shadow:0 4px 0 #bb6b09}.btn:hover{background:#c47105}.btn:active{transform:translateY(2px);box-shadow:0 2px 0 #bb6b09}.btn.secondary{background:#fff;color:#8d540c;border:1px solid #e4ba79;box-shadow:none}.actions{text-align:center;padding:8px 0 24px}.status{font-weight:700;color:var(--blue);margin:12px auto;min-height:26px}.choice.correct{border-color:#16916d;background:#ecfaf5}.choice.incorrect{border-color:#2d6acc;background:#eef4ff}.feedback{font-size:13px;margin:10px 0 0;color:#265c72;font-weight:650}.hidden{display:none!important}
+#completion{position:fixed;inset:0;z-index:100;background:#fff8ea;overflow:auto;padding:18px;display:flex;justify-content:center;align-items:flex-start}.certificate{background:#fff;border:7px double #e2a321;max-width:760px;width:100%;text-align:center;border-radius:23px;padding:36px 28px 30px;box-shadow:0 9px 35px rgba(88,57,12,.13);margin:auto}.certificate .smallcap{font-weight:900;letter-spacing:.17em;font-size:14px;color:#ac650a}.trophy{font-size:46px;margin:10px 0}.student-name-display{font-size:clamp(30px,6vw,48px);font-weight:900;overflow-wrap:anywhere;margin:8px 0 2px}.big-good{font-size:clamp(34px,8vw,57px);font-weight:950;color:#d67b02;line-height:1.2;margin:5px 0}.big-excellent{font-size:clamp(29px,7vw,46px);font-weight:950;color:#06976e;line-height:1.2;margin:5px 0 15px}.complete-detail{font-size:17px;font-weight:750}.final-score{font-size:clamp(24px,5vw,35px);font-weight:950;margin:15px 0;color:#0d1b30}.scoregrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:15px auto;max-width:530px}.scorecell{background:#f9f8f4;border:1px solid #ece5da;border-radius:10px;padding:9px 6px}.scorecell strong{display:block;font-size:20px}.scorecell span{font-size:12px;color:#586272}.submit-note{font-size:14px;margin:18px 0 15px;color:#475569}.certificate .btn{margin:5px}.tiny{font-size:12px;color:#718096;margin:5px 0 0}@media(max-width:650px){.intro{grid-template-columns:1fr}.choices{grid-template-columns:1fr}.panel{padding:17px}.question{padding:14px}.certificate{padding:25px 15px}#completion{padding:8px}.scoregrid{gap:5px}.scorecell{padding:6px 4px}.student-name-display{margin-top:2px}}@media print{body{background:white}header,main,footer,.screen-only{display:none!important}#completion{position:static!important;display:block!important;padding:0;overflow:visible}.certificate{border:6px double #cf9a29;box-shadow:none;max-width:none;page-break-inside:avoid} @page{margin:8mm}}
+</style></head>
+<body>
+<header><div class="shell top"><div><div class="eyebrow">Korean Language · Review Assessment</div><h1>Korean Practice — November 24</h1><p class="sub">Review of the November 17 lesson · Check your understanding</p></div><div class="pill">20 questions · 100 points</div></div></header>
+<main class="shell main">
+<section class="panel intro" aria-labelledby="guide-title"><div><h2 id="guide-title">Instructions</h2><p>Review what you learned in the November 17 lesson. This activity checks your understanding of Korean expressions, grammar, dialogues, and reading.</p><ol class="rules"><li>Enter your <strong>name</strong> before you begin.</li><li>Choose one answer for each of the <strong>20 questions</strong>.</li><li>Click <strong>Finish &amp; View Results</strong> after answering all questions.</li><li>Take a <strong>screenshot of the completion screen</strong> showing your name and score, and <strong>send it to your teacher</strong>.</li></ol><p style="margin-top:12px;color:#946004;font-weight:750;font-size:14px">A perfect score is not required. Complete every question and do your best!</p></div><div class="student"><label for="studentName">Student Name <span aria-hidden="true">*</span></label><input type="text" id="studentName" autocomplete="name" maxlength="80" placeholder="Enter your full name" required><p class="hint">Your name will appear on your completion screen.</p><div class="progress-wrap"><div class="track" aria-label="Answer progress"><div class="bar" id="progressBar"></div></div><span class="progress-text" id="progressText">0 / 20</span></div></div></section>
+<div id="quizSections"></div>
+<div class="actions"><button type="button" id="finishButton" class="btn">Finish &amp; View Results</button><p class="status" id="status" role="status" aria-live="polite"></p></div>
+</main>
+<footer class="footerline">Korean Language Review · Tuesday, November 24 · Study material: November 17 lesson</footer>
+<section id="completion" class="hidden" aria-label="Korean Practice Completed" role="dialog" aria-modal="true">
+ <div class="certificate" id="certificate">
+  <div class="smallcap">KOREAN PRACTICE COMPLETED</div><div class="trophy" aria-hidden="true">🏆</div>
+  <div class="student-name-display" id="resultName"></div><div class="big-good">GOOD JOB!</div><div class="big-excellent">EXCELLENT!</div>
+  <div class="complete-detail">You have completed all 20 questions!</div><div class="final-score">Final Score: <span id="resultScore"></span> / 100 points</div>
+  <div class="scoregrid" id="breakdown"></div>
+  <p class="submit-note"><strong>Take a screenshot of this screen and send it to your teacher.</strong></p>
+  <div class="screen-only"><button class="btn" type="button" id="printButton">Print / Save as PDF</button> <button class="btn secondary" type="button" id="reviewButton">Review Answers</button></div>
+  <p class="tiny">Korean Practice · November 24</p>
+ </div>
+</section>
+<script>
+"use strict";
+const reading = `우리 할머니는 한국 사람이에요. 전에는 제가 한국어를 못해서 자주 전화를 안 했어요.
+요즘은 한국어를 조금 배워서 한국어로 전화해요. 그런데 우리 할머니는 정말 빨리 말해요.
+저는 할머니를 사랑하지만 할머니 말을 이해할 수 없어요. 그래서 그냥 “네. 네. 할머니.” 이렇게 이야기해요.
+오늘부터 한국어를 더 열심히 공부하려고 해요. 할머니하고 많이 이야기하고 싶어요.`;
+const dialogue = `쉐르조드: 주말에 뭐 할 거예요?
+로니: 토요일에 제 생일 파티를 하려고 해요. 올 수 있어요?
+쉐르조드: 네. 갈 수 있어요. 칵흐라몬 씨도 갈 수 있어요?
+로니: 네, 저도 갈 수 있어요.
+쉐르조드: 좋아요. 그럼 6시까지 하나 식당으로 오세요.
+로니: 네. 토요일에 하나 식당에서 봐요.`;
+const sections = [
+ {title:'Grammar: -(으)ㄹ 수 있다 / 없다',subtitle:'Choose the grammatically correct form to express ability or inability.',questions:[
+  {q:'Choose the correct form of “먹다” (can eat).',a:['먹을 수 있어요.','먹는 수 있어요.','먹어 수 있어요.','먹었 수 있어요.'],correct:0},
+  {q:'Choose the correct form of “읽다” (cannot read).',a:['읽어 수 없어요.','읽을 수 없어요.','읽는 수 없어요.','읽었 수 없어요.'],correct:1},
+  {q:'Choose the correct form of “운전하다” (can drive).',a:['운전하 수 있어요.','운전하고 수 있어요.','운전할 수 있어요.','운전하는 수 있어요.'],correct:2},
+  {q:'Choose the correct form of “빌리다” (can borrow).',a:['빌리 수 있어요.','빌릴 수 있어요.','빌려 수 있어요.','빌린 수 있어요.'],correct:1},
+  {q:'Choose the correct form of “수영하다” (cannot swim).',a:['수영해 수 없어요.','수영하는 수 없어요.','수영하 수 없어요.','수영할 수 없어요.'],correct:3}
+ ]},
+ {title:'Vocabulary & Everyday Expressions',subtitle:'Use expressions and situations from the lesson.',questions:[
+  {q:'What do you say when answering the phone?',a:['미안해요.','여보세요.','오랜만이에요.','괜찮아요.'],correct:1},
+  {q:'Complete the response: 가: “어제 뭐 했어요?” 나: “가족하고 ____.” (I had a video call.)',a:['영상을 통화했어요.','영상통화를 했어요.','영상통화를 받았어요.','연락을 읽었어요.'],correct:1},
+  {q:'Choose the expression meaning “I sent a text message.”',a:['메시지를 받았어요.','전화를 받았어요.','메시지를 보냈어요.','전화를 못 했어요.'],correct:2},
+  {q:'Complete the sentence: “서울역에서 501번 버스를 타고 시청역으로 가세요. 시청역에서 지하철로 ____.”',a:['내리세요.','보내세요.','갈아타세요.','빌리세요.'],correct:2},
+  {q:'Which expression means “I am sorry”?',a:['죄송해요.','오랜만이에요.','놀 수 있어요.','어서 오세요.'],correct:0}
+ ]},
+ {title:'Reading Comprehension',subtitle:'Read the Korean passage and choose the best answer.',passage:reading,passageClass:'reading',questions:[
+  {q:'글쓴이는 왜 전에는 할머니에게 자주 전화하지 않았어요?',a:['바빠서','한국어를 못해서','휴대전화가 없어서','할머니가 멀리 살아서'],correct:1},
+  {q:'요즘 글쓴이는 할머니와 어떻게 연락해요?',a:['영어로 메시지를 보내요.','전화를 안 해요.','한국어로 전화해요.','편지를 써요.'],correct:2},
+  {q:'글쓴이는 왜 할머니 말을 이해할 수 없어요?',a:['할머니가 너무 빨리 말해서','할머니가 전화를 안 받아서','글쓴이가 너무 바빠서','할머니가 영어로 말해서'],correct:0},
+  {q:'할머니 말이 너무 빠를 때 어떻게 부탁하면 좋을까요?',a:['“죄송해요. 안녕히 계세요.”','“천천히 말씀해 주세요.”','“네. 네. 할머니.”','“오늘은 전화하지 마세요.”'],correct:1},
+  {q:'글쓴이는 앞으로 무엇을 하고 싶어요?',a:['한국어 공부를 그만두고 싶어요.','한국어를 더 열심히 공부하고 싶어요.','한국에 가지 않으려고 해요.','할머니에게 전화하지 않으려고 해요.'],correct:1}
+ ]},
+ {title:'Dialogue Comprehension',subtitle:'Read the conversation and answer the questions.',passage:dialogue,passageClass:'dialogue',questions:[
+  {q:'로니는 토요일에 무엇을 하려고 해요?',a:['농구를 하려고 해요.','한국어를 배우려고 해요.','생일 파티를 하려고 해요.','책을 읽으려고 해요.'],correct:2},
+  {q:'로니는 쉐르조드에게 무엇을 물어봐요?',a:['생일파티에 올 수 있어요?','수영할 수 있어요?','한국어를 읽을 수 있어요?','운전할 수 있어요?'],correct:0},
+  {q:'쉐르조드는 생일 파티에 갈 수 있어요?',a:['아니요, 갈 수 없어요.','네, 갈 수 있어요.','아니요, 바빠요.','아직 몰라요.'],correct:1},
+  {q:'쉐르조드 씨는 몇 시까지 가야 해요?',a:['4시까지','5시까지','6시까지','10시까지'],correct:2},
+  {q:'어디로 가면 돼요?',a:['하나 식당으로 가면 돼요.','학교로 가면 돼요.','체육관으로 가면 돼요.','은행으로 가면 돼요.'],correct:0}
+ ]}
+];
+const questions = sections.flatMap((s,sectionIndex)=>s.questions.map((q)=>({...q,sectionIndex})));
+let submitted=false;
+const quizSections=document.getElementById('quizSections');
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function render(){let index=0;quizSections.innerHTML=sections.map((section,si)=>{
+ const content=section.questions.map(q=>{const qi=index++;return `<article class="question" id="question-${qi}"><p class="question-title"><span class="q-number">${qi+1}.</span>${escapeHtml(q.q)}</p><div class="choices">${q.a.map((option,oi)=>`<label class="choice" id="choice-${qi}-${oi}"><input type="radio" name="q${qi}" value="${oi}" aria-label="Question ${qi+1}, option ${oi+1}"><span>${escapeHtml(option)}</span></label>`).join('')}</div><div class="feedback hidden" id="feedback-${qi}"></div></article>`;}).join('');
+ return `<section class="panel" aria-labelledby="section-${si}"><div class="section-head"><div><div class="eyebrow">Part ${si+1} of ${sections.length}</div><h2 id="section-${si}">${escapeHtml(section.title)}</h2><p>${escapeHtml(section.subtitle)}</p></div><span class="section-count">5 questions · 25 points</span></div>${section.passage?`<div class="${section.passageClass}">${escapeHtml(section.passage)}</div>`:''}${content}</section>`;
+}).join('');}
+function getAnswers(){return questions.map((_,i)=>{const selected=document.querySelector(`input[name="q${i}"]:checked`);return selected?Number(selected.value):null;});}
+function updateProgress(){const done=getAnswers().filter(x=>x!==null).length;document.getElementById('progressBar').style.width=`${(done/questions.length)*100}%`;document.getElementById('progressText').textContent=`${done} / ${questions.length}`;}
+render();quizSections.addEventListener('change',updateProgress);
+document.getElementById('finishButton').addEventListener('click',()=>{
+ const name=document.getElementById('studentName').value.trim();const status=document.getElementById('status');
+ if(!name){status.textContent='Please enter your name before submitting.';document.getElementById('studentName').focus();document.getElementById('studentName').scrollIntoView({behavior:'smooth',block:'center'});return;}
+ const answers=getAnswers();const missing=answers.findIndex(x=>x===null);
+ if(missing>=0){status.textContent=`Please answer all questions. Question ${missing+1} is still blank.`;document.getElementById(`question-${missing}`).scrollIntoView({behavior:'smooth',block:'center'});return;}
+ const sectionCorrect=[0,0,0,0];let count=0;questions.forEach((q,i)=>{const correct=answers[i]===q.correct;if(correct){count++;sectionCorrect[q.sectionIndex]++;}
+ const choice=document.getElementById(`choice-${i}-${answers[i]}`);choice.classList.add(correct?'correct':'incorrect');document.getElementById(`choice-${i}-${q.correct}`).classList.add('correct');
+ const feedback=document.getElementById(`feedback-${i}`);feedback.classList.remove('hidden');feedback.textContent=correct?'Correct.':`Review: ${q.a[q.correct]}`;
+ });
+ submitted=true;document.getElementById('resultName').textContent=name;document.getElementById('resultScore').textContent=count*5;
+ document.getElementById('breakdown').innerHTML=sections.map((s,i)=>`<div class="scorecell"><span>${escapeHtml(['Grammar','Vocabulary & Expressions','Reading','Dialogue'][i])}</span><strong>${sectionCorrect[i]} / 5</strong></div>`).join('');
+ document.getElementById('completion').classList.remove('hidden');document.body.style.overflow='hidden';document.getElementById('completion').scrollTop=0;
+ status.textContent='All questions submitted. Your results are ready.';
+});
+document.getElementById('reviewButton').addEventListener('click',()=>{document.getElementById('completion').classList.add('hidden');document.body.style.overflow='';window.scrollTo({top:0,behavior:'smooth'});});
+document.getElementById('printButton').addEventListener('click',()=>window.print());
+</script>
+</body></html>
